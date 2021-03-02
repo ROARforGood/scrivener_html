@@ -1,3 +1,25 @@
+# ROAR locally hosted version.
+
+This repo is a locally-hosted clone of [scrivener_html](https://github.com/mgwidmann/scrivener_html), and follows local repo hosting rules:
+- If changes need to be made (and they should be *minor* changes), they should be made directly to the master branch.  No branching-- we are not maintaining the local clone, unless it is an abandoned project.
+- As soon as the malady that forced the locally-hosted clone has been addressed in the source project, burn the clone repo to the ground.
+
+## [scrivener_html](https://github.com/mgwidmann/scrivener_html) Malady addressed:
+
+- Limited phoenix version to < 1.5 with this dependency:
+```
+  # ...
+  {:phoenix, "~> 1.0 and < 1.5.0", optional: true},
+  # ...
+```
+- Changed to the following to allow phoenix 1.5:
+```
+  # ...
+  {:phoenix, "~> 1.0 and < 1.6.0", optional: true},
+  # ...
+```
+- Added this ROAR preamble to README
+
 # Scrivener.Html [![Build Status](https://semaphoreci.com/api/v1/projects/3b1ad27c-8991-4208-94d0-0bae42108482/638637/badge.svg)](https://semaphoreci.com/mgwidmann/scrivener_html)
 
 Helpers built to work with [Scrivener](https://github.com/drewolson/scrivener)'s page struct to easily build HTML output for various CSS frameworks.
